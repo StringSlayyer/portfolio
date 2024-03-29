@@ -52,11 +52,11 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="bg-black h-40">
+    <NextUINavbar maxWidth="xl" position="sticky" className="bg-black h-48">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Image src={logo1} alt="logo" className="w-32" />
+            <Image src={logo1} alt="logo" className="w-32 my-auto" />
           </NextLink>
         </NavbarBrand>
         <div className="hidden lg:flex gap-4 justify-start ml-2">
@@ -64,10 +64,9 @@ export const Navbar = () => {
             <NavbarItem key={item.href}>
               <NextLink
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium text-white"
                 )}
-                color="foreground"
+                color="white"
                 href={item.href}
               >
                 {item.label}

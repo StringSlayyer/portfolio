@@ -60,6 +60,7 @@ export const siteConfig = {
     },
   ],
   links: {
+    chc: "https://creativehill.cz",
     github: "https://github.com/nextui-org/nextui",
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui-docs-v2.vercel.app",

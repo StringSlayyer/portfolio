@@ -14,9 +14,22 @@ module.exports = {
     }),
   ],
   theme: {
+    borderRadius: {
+      none: "0",
+      sm: "0.125rem",
+      DEFAULT: "0.25rem",
+      md: "0.375rem",
+      lg: "0.5rem",
+      xl: "0.75rem",
+      "2xl": "1rem",
+      "3xl": "1.5rem",
+      "4xl": "4rem",
+      full: "9999px",
+    },
     colors: {
       grey: {
-        50: "#B9B9B9",
+        50: "#E6E6E6",
+        100: "#B9B9B9",
         200: "#606060",
         400: "#707070",
         600: "#1E1E1E",
