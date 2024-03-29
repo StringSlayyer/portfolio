@@ -99,28 +99,33 @@ export default function IndexPage() {
             i na zakázku.{" "}
           </p>
         </div>
-        <div id="technologie" className="grid grid-cols-2 w-4/5 mx-auto gap-0">
-          <div className="grid grid-cols-3 gap-y-6 gap-1 w-2/3 justify-items-center">
-            {list.map((item, index) => (
-              <Tooltip content={item.title} key={index}>
-                <Card
-                  shadow="sm"
-                  isHoverable
-                  className="w-4/5 p-3 h-auto"
-                  onPress={() => console.log("item pressed")}
-                >
-                  <CardBody className="overflow-visible p-0">
-                    <Image
-                      alt={item.title}
-                      src={item.img}
-                      className="object-cover mx-auto my-auto"
-                    />
-                  </CardBody>
-                </Card>
-              </Tooltip>
-            ))}
-          </div>
-          <Card className="bg-blood-700 rounded-4xl w-full mx-auto py-4">
+        <div id="technologie" className="grid grid-cols-2">
+          <Card className="bg-blood-700 rounded-4xl w-4/5 mx-auto py-4">
+            <CardHeader className="text-center text-3xl mb-8 text-grey-50">
+              <h1 className="mx-auto">Technologie</h1>
+            </CardHeader>
+            <CardBody className="grid grid-cols-3 mx-auto gap-y-6 gap-10 w-4/5 justify-items-center">
+              {list.map((item, index) => (
+                <Tooltip content={item.title} key={index}>
+                  <Card
+                    shadow="sm"
+                    isHoverable
+                    className="w-4/5 p-3 h-auto"
+                    onPress={() => console.log("item pressed")}
+                  >
+                    <CardBody className="overflow-visible p-0">
+                      <Image
+                        alt={item.title}
+                        src={item.img}
+                        className="object-cover mx-auto my-auto"
+                      />
+                    </CardBody>
+                  </Card>
+                </Tooltip>
+              ))}
+            </CardBody>
+          </Card>
+          <Card className="bg-blood-700 rounded-4xl w-4/5 mx-auto py-4">
             <CardHeader className="text-center text-3xl mb-8 text-grey-50">
               <h1 className="mx-auto">Technologie</h1>
             </CardHeader>
