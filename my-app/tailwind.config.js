@@ -39,7 +39,12 @@ module.exports = {
         700: "#510404",
       },
     },
-    extend: {},
+    extend: {
+      backdropBrightness: {
+        25: ".25",
+        75: ".75",
+      },
+    },
     darkMode: "class",
   },
   plugins: [

@@ -69,7 +69,18 @@ export const siteConfig = {
   },
   githubProjects: [
     {
-      label: "",
+      label: "Rozřazení žáků",
+      description:
+        "Aplikace pro generování časového rozvrhu zkoušek a přiřazení jmen z poskytnutého seznamu podle zadaného časového rozmezí.",
+      technologies: "Java",
+      href: "https://github.com/StringSlayyer/rozrazeni-zaku-java",
+    },
+    {
+      label: "Jednoduchý bankovní systém",
+      description:
+        "Aplikace simulující bankovní systém s možností vkládání a vybírání peněz, kontokorentu a spotřebitelského úvěru.",
+      technologies: "Java",
+      href: "https://github.com/StringSlayyer/bankovni_ucet-java",
     },
   ],
 };

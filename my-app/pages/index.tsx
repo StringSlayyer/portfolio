@@ -8,7 +8,7 @@ import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
 import Typewriter from "typewriter-effect";
 import Image from "next/image";
-import { Card, CardHeader, CardBody, Tooltip } from "@nextui-org/react";
+import { Card, CardHeader, CardBody, Tooltip, Button } from "@nextui-org/react";
 
 import img1 from "../public/ja.jpg";
 import nextui from "../public/nextui.png";
@@ -99,8 +99,8 @@ export default function IndexPage() {
             i na zakázku.{" "}
           </p>
         </div>
-        <div id="technologie" className="grid grid-cols-2">
-          <Card className="bg-blood-700 rounded-4xl w-4/5 mx-auto py-4">
+        <div id="technologie" className="grid grid-cols-2 my-10">
+          <Card className="bg-black rounded-4xl w-4/5 mx-auto py-4">
             <CardHeader className="text-center text-3xl mb-8 text-grey-50">
               <h1 className="mx-auto">Technologie</h1>
             </CardHeader>
@@ -127,9 +127,37 @@ export default function IndexPage() {
           </Card>
           <Card className="bg-blood-700 rounded-4xl w-4/5 mx-auto py-4">
             <CardHeader className="text-center text-3xl mb-8 text-grey-50">
-              <h1 className="mx-auto">Technologie</h1>
+              <h1 className="mx-auto">Projekty</h1>
             </CardHeader>
-            <CardBody></CardBody>
+            <CardBody className="grid grid-cols-2 justify-items-center">
+              {siteConfig.githubProjects.map((item, index) => (
+                <Card
+                  key={index}
+                  shadow="sm"
+                  isBlurred
+                  className="w-4/5 p-3 backdrop-brightness-75 h-fit"
+                >
+                  <CardBody className="overflow-visible p-0">
+                    <h1 className="text-lg text-grey-50 leading-5 mt-2">
+                      {item.label}
+                    </h1>
+                    <h2 className="text-grey-50">{item.technologies}</h2>
+                    <p className="text-grey-100 text-sm leading-5">
+                      {item.description}
+                    </p>
+                    <Button
+                      href={item.href}
+                      as={Link}
+                      showAnchorIcon
+                      isExternal
+                      className="bg-blood-700 my-3 text-white"
+                    >
+                      Zobrazit na GitHubu
+                    </Button>
+                  </CardBody>
+                </Card>
+              ))}
+            </CardBody>
           </Card>
         </div>
       </div>
