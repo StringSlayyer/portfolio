@@ -56,7 +56,7 @@ export const Navbar = () => {
       maxWidth="xl"
       position="sticky"
       shouldHideOnScroll={false}
-      className="bg-black h-48"
+      className="bg-black h-fit"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
