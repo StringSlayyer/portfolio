@@ -69,6 +69,13 @@ export const siteConfig = {
   },
   githubProjects: [
     {
+      label: "Lumberjack's Adventure",
+      description:
+        "3D hra vytvořená v Unity, hráč kácí stromy, plní úkoly a postupuje v levelech.",
+      technologies: "Unity, C#",
+      href: "https://github.com/StringSlayyer/LumberjacksAdventure",
+    },
+    {
       label: "Rozřazení žáků",
       description:
         "Aplikace pro generování časového rozvrhu zkoušek a přiřazení jmen z poskytnutého seznamu podle zadaného časového rozmezí.",
@@ -81,6 +88,13 @@ export const siteConfig = {
         "Aplikace simulující bankovní systém s možností vkládání a vybírání peněz, kontokorentu a spotřebitelského úvěru.",
       technologies: "Java",
       href: "https://github.com/StringSlayyer/bankovni_ucet-java",
+    },
+    {
+      label: "Tenis",
+      description:
+        "Simulace tenisového zápasu, kde hráč určuje, který hráč vyhraje.",
+      technologies: "Java",
+      href: "https://github.com/StringSlayyer/tenis-java",
     },
   ],
 };

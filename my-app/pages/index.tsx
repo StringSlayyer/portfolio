@@ -10,7 +10,7 @@ import Typewriter from "typewriter-effect";
 import Image from "next/image";
 import { Card, CardHeader, CardBody, Tooltip, Button } from "@nextui-org/react";
 
-import img1 from "../public/ja.jpg";
+import img1 from "../public/IMG_0406.jpg";
 import nextui from "../public/nextui.png";
 import nextjs from "../public/nextjs.svg";
 import tailwindcss from "../public/tailwind.png";
@@ -63,10 +63,10 @@ export default function IndexPage() {
   return (
     <DefaultLayout>
       <div className="bg-grey-600 text-grey-400">
-        <div className="flex justify-around items-center flex-row w-full h-screen">
-          <div className="w-1/3 ml-24 mb-16 text-3xl leading-10">
+        <div className="flex justify-center items-center flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row w-full h-screen">
+          <div className="w-1/2 flex flex-col justify-center  mb-16 text-4xl leading-10">
             <h2>jmenuji se</h2>
-            <h1 className="text-[2.75rem]">Samuel Žárský</h1>
+            <h1 className="text-[3rem] my-1">Samuel Žárský</h1>
             <div className="flex">
               <h2 className="mr-2">Jsem </h2>
               <Typewriter
@@ -129,13 +129,13 @@ export default function IndexPage() {
             <CardHeader className="text-center text-3xl mb-8 text-grey-50">
               <h1 className="mx-auto">Projekty</h1>
             </CardHeader>
-            <CardBody className="grid grid-cols-2 justify-items-center">
+            <CardBody className="grid grid-cols-2 justify-items-center gap-y-6">
               {siteConfig.githubProjects.map((item, index) => (
                 <Card
                   key={index}
                   shadow="sm"
                   isBlurred
-                  className="w-4/5 p-3 backdrop-brightness-75 h-fit"
+                  className="w-4/5 p-3 h-fit"
                 >
                   <CardBody className="overflow-visible p-0">
                     <h1 className="text-lg text-grey-50 leading-5 mt-2">
@@ -159,6 +159,9 @@ export default function IndexPage() {
               ))}
             </CardBody>
           </Card>
+        </div>
+        <div id="fotogalerie">
+          <h1 className="text-3xl text-grey-50 text-center">Fotogalerie</h1>
         </div>
       </div>
     </DefaultLayout>

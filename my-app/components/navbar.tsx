@@ -52,7 +52,12 @@ export const Navbar = () => {
   );
 
   return (
-    <NextUINavbar maxWidth="xl" position="sticky" className="bg-black h-48">
+    <NextUINavbar
+      maxWidth="xl"
+      position="sticky"
+      shouldHideOnScroll={false}
+      className="bg-black h-48"
+    >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -90,7 +95,6 @@ export const Navbar = () => {
           <Link isExternal href={siteConfig.links.github}>
             <GithubIcon className="text-default-500" />
           </Link>
-          <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
